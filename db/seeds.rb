@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Product.create(name: "Lizard Belt", price: 215, image_path: " ", description: "Made from genuine lizard leather")
+
+Product.create(name: "Silk Kimono", price: 1200, image_path: " ", description: "For lounging in the finest Egyptian silk")
+
+Product.create(name: "Tuxedo", price: 2000, image_path: " ", description: "Black tie")
+
+Product.create(name: "Diamond Cufflinks", price: 8000, image_path: " ", description: "So you can flex on everyone")
+
+Product.create(name: "Cashmere Socks", price: 95, image_path: " ", description: "Because your feet need cashmere too")
+
+Product.create(name: "Crocodile 3-Piece Suit", price: 7500, description: "Because why not")
