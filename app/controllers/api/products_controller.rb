@@ -1,7 +1,23 @@
 class Api::ProductsController < ApplicationController
 
-  def product_action
-    @product = Product.all
-    render "product.json.jb"
+  def all_products_action
+    @products = Product.all
+    render "all_products.json.jb"
   end
+
+  def single_product_action
+    @product = Product.first
+    render "single_product.json.jb"
+  end
+
+  def second_product_action
+    @product = Product.find_by(id: 2)
+    render "single_product.json.jb"
+  end
+
+  def third_product_action
+    @product = Product.find_by(id: 3)
+    render "single_product.json.jb"
+  end
+
 end
