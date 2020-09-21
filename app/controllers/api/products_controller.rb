@@ -1,33 +1,10 @@
 class Api::ProductsController < ApplicationController
 
-  def all_products_action
-    @products = Product.all
-    render "all_products.json.jb"
-  end
-
-  def single_product_action
-    @product = Product.first
-    render "single_product.json.jb"
-  end
-
-  def second_product_action
-    @product = Product.find_by(id: 2)
-    render "single_product.json.jb"
-  end
-
-  def third_product_action
-    @product = Product.find_by(id: 3)
-    render "single_product.json.jb"
-  end
-
-  def any_product_action
-    product_id = params[:id]
-    @product = Product.find_by(id: product_id)
-    render "single_product.json.jb"
-  end
-
   def index
     @products = Product.all
+    # if params[:search]
+    # @products.where("name iLIKE ?", "#{params[:name]}")
+    # end
     render "index.json.jb"
   end
 
@@ -40,11 +17,35 @@ class Api::ProductsController < ApplicationController
     @product = Product.new({
       name: params[:name],
       price: params[:price],
-      image_path: params[:image_path],
-      description: params[:description]
+      description: params[:description],
+      inventory: params[:inventory],
+      supplier_id: params[:supplier_id]
       })
-    @product.save
-    render "show.json.jb"
+    if @product.save # happy path
+      render "show.json.jb"
+    else # sad path
+      render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity # same as using 'status: 422'
+    end
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    @product.name = params[:name] || @product.name
+    @product.price = params[:price] || @product.price
+    @product.description = params[:description] || @product.description
+    @product.inventory = params[:inventory] || @product.inventory
+    @product.supplier_id params[:supplier_id] || @product.supplier_id
+    if @product.save # happy path
+      render "show.json.jb"
+    else # sad path
+      render json: {errors: @product.errors.full_messages}, status: :expectation_failed # same as 'status: 417', but ultimately the error status code you choose is arbitrary
+    end
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    render json: {message: "You have successfully destroyed the file"}
   end
 
 end
