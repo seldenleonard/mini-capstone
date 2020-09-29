@@ -1,0 +1,16 @@
+{
+  id: order.id,
+  user_id: order.user_id,
+  subtotal: order.subtotal,
+  tax: order.tax,
+  total: order.total,
+  carted_products: order.carted_products.map do |carted_product|
+  render partial: "/api/carted_products/carted_product" locals: { carted_product: carted_product }
+  # This render line is essesntially doing the same thing as the hash written below
+  # {
+  #   id: carted_product.id,
+  #   quantity: carted_product.quantity,
+  #   product: carted_product.product
+  # }
+  end
+}

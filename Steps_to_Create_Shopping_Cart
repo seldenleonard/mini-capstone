@@ -1,0 +1,11 @@
+1. Remove product_id and quantity from "orders" table.
+2. Create database called "carted_products" with column's for id, user_id, product_id, order_id, quantity, and status. Status will hold either "carted", "removed", or "purchased". So now we have four databases which will matter to the shopping cart process - products, users, orders, and carted_products.
+3. Migrate and make data test that these changes have worked correctly.
+4. Update associations in models
+5. Make carted_products controller
+6. Make a carted_products "create" action, then an "index" action (which must be only current_user's products that have a status of "carted")
+7. Test out "create" and "index" actions
+8. Change orders' "create" action
+9. Add in carted_products "destroy" action, which should not delete them from database but instead change status to "removed"
+10. Test out carted_products "destroy" action
+11. Update authentication

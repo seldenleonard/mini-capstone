@@ -1,0 +1,11 @@
+create rails model Order with product_id quantity user_id tax and total
+make an orders_controller
+create a post request for a new order
+In the models folder go into order.rb file, product.rb file, and user.rb file and associate Order and Products (products belonging to order), the Orders and User (orders belong to users, users have many orders)
+Inside of users_controller, create an orders create, which accepts a user's parameters for product and quantity
+
+
+Notes: need to have the method go to the product instance and collect the product_id
+need a post route to create a new order
+need an orders_controller
+need an orders show route so they can see the details of that order
