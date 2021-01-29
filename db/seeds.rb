@@ -1,25 +1,25 @@
-# Supplier.create!([
-#   {name: "Luxury FabricsWorldwide", email: "luxury@fabrics.com", phone_number: "2324445656"},
-#   {name: "DeBeers Diamonds", email: "debeers@debeers.com", phone_number: "2873455556"},
-#   {name: "The Finest Things", email: "finethings@things.com", phone_number: "7836549276"}
-# ])
+Supplier.create!([
+  {name: "Luxury FabricsWorldwide", email: "luxury@fabrics.com", phone_number: "2324445656"},
+  {name: "DeBeers Diamonds", email: "debeers@debeers.com", phone_number: "2873455556"},
+  {name: "The Finest Things", email: "finethings@things.com", phone_number: "7836549276"}
+])
 
-# Product.create!([
-#   {name: "Silk Kimono", price: "1200.0", description: "For lounging in the finest Egyptian silk", inventory: 8, supplier_id: 1},
-#   {name: "Tuxedo", price: "2000.0", description: "Black tie good", inventory: 3, supplier_id: 1},
-#   {name: "Cashmere Socks", price: "95.0", description: "Because your feet need cashmere too", inventory: 5, supplier_id: 1},
-#   {name: "Diamond Cufflinks", price: "8000.0", description: "So you can flex on everyone", inventory: 12, supplier_id: 2},
-#   {name: "Emerald Toe Ring", price: "14800.0", description: "Do not combine with cashmere socks", inventory: 15, supplier_id: 2},
-#   {name: "Lizard Belt", price: "215.0", description: "Made from genuine lizard leather", inventory: 8, supplier_id: 3},
-#   {name: "Antique Gold Monocle", price: "17000.0", description: "A necessity for anyone who loves to see things using the best of 14th century technology.", inventory: 30, supplier_id: 3},
-#   {name: "Ivory Pocketwatch", price: "6000.0", description: "From when ivory was legal", inventory: 1, supplier_id: 3},
-#   {name: "Crocodile 3-Piece Suit", price: "15500.0", description: "Because why not", inventory: 12, supplier_id: 3},
-#   {name: "Grillz", price: "20000.0", description: "For staying clean", inventory: 12, supplier_id: 2}
-# ])
-# User.create!([
-#   {name: "Harry", email: "harry@gmail.com", password_digest: "$2a$12$ty/hUCX7kh1/EZLDkbRDa.3ESNNImZd.1LBRi3UGL1MvHEsca4HBq", admin: true},
-#   {name: "Will", email: "will@gmail.com", password_digest: "$2a$12$ankmbFzYsOK1ercp2fsQJ.BgtXQf8zMbYtfkobgQ79z0CmqzgBtOi", admin: false}
-# ])
+Product.create!([
+  {name: "Silk Kimono", price: "1200.0", description: "For lounging in the finest Egyptian silk", inventory: 8, supplier_id: 1},
+  {name: "Tuxedo", price: "2000.0", description: "Black tie good", inventory: 3, supplier_id: 1},
+  {name: "Cashmere Socks", price: "95.0", description: "Because your feet need cashmere too", inventory: 5, supplier_id: 1},
+  {name: "Diamond Cufflinks", price: "8000.0", description: "So you can flex on everyone", inventory: 12, supplier_id: 2},
+  {name: "Emerald Toe Ring", price: "14800.0", description: "Do not combine with cashmere socks", inventory: 15, supplier_id: 2},
+  {name: "Lizard Belt", price: "215.0", description: "Made from genuine lizard leather", inventory: 8, supplier_id: 3},
+  {name: "Antique Gold Monocle", price: "17000.0", description: "A necessity for anyone who loves to see things using the best of 14th century technology.", inventory: 30, supplier_id: 3},
+  {name: "Ivory Pocketwatch", price: "6000.0", description: "From when ivory was legal", inventory: 1, supplier_id: 3},
+  {name: "Crocodile 3-Piece Suit", price: "15500.0", description: "Because why not", inventory: 12, supplier_id: 3},
+  {name: "Grillz", price: "20000.0", description: "For staying clean", inventory: 12, supplier_id: 2}
+])
+User.create!([
+  {name: "Harry", email: "harry@gmail.com", password_digest: "$2a$12$ty/hUCX7kh1/EZLDkbRDa.3ESNNImZd.1LBRi3UGL1MvHEsca4HBq", admin: true},
+  {name: "Will", email: "will@gmail.com", password_digest: "$2a$12$ankmbFzYsOK1ercp2fsQJ.BgtXQf8zMbYtfkobgQ79z0CmqzgBtOi", admin: false}
+])
 
 Image.create!([
   {url: "https://cdn3.volusion.com/gkczq.onkqf/v/vspfiles/photos/213-10w325G-2.jpg?v-cache=1575918490", product_id: 1},
